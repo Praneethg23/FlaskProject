@@ -1,0 +1,1944 @@
+{
+	"info": {
+		"_postman_id": "78daca10-ef7e-4440-b263-66707fd5b17e",
+		"name": "extensions_testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27146921"
+	},
+	"item": [
+		{
+			"name": "Post User 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"var jsondata = pm.response.json()\r",
+							" \r",
+							"pm.globals.set(\"user_key\", jsondata.user_key);\r",
+							"pm.globals.set(\"user_id\", jsondata.user_id);\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Praneeth\",\n    \"name\" :\"Praneeth Gubba\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post User 1",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"Praneeth\",\n    \"name\" :\"Praneeth Gubba\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.1 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 May 2023 22:54:01 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "96"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Praneeth Gubba\",\n    \"user_id\": 0,\n    \"user_key\": \"vUY_n-Xy3F5BG8QWp8Herg\",\n    \"username\": \"Praneeth\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Post User 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"var jsondata = pm.response.json()\r",
+							" \r",
+							"pm.globals.set(\"user_key\", jsondata.user_key);\r",
+							"pm.globals.set(\"user_id\", jsondata.user_id);\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"ladduRaman\",\n    \"name\":\"Raman Sri\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post User 2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"ladduRaman\",\n    \"name\":\"Raman Sri\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.1 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 May 2023 22:55:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "93"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Raman Sri\",\n    \"user_id\": 1,\n    \"user_key\": \"8LLmfG-RBK5NBZb0jMihkA\",\n    \"username\": \"ladduRaman\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Post User error",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 403\", function () {   pm.response.to.have.status(403);});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Praneeth\",\n    \"name\":\"Gubba Praneeth\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post User error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"Praneeth\",\n    \"name\":\"Gubba Praneeth\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"status": "FORBIDDEN",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.1 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 May 2023 22:58:16 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "20"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"err\": \"forbidden\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get User 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.user_id).to.eql(0);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/user/Praneeth",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"Praneeth"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get User 1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/user/Praneeth",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"Praneeth"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.1 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 May 2023 22:59:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "60"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Praneeth Gubba\",\n    \"user_id\": 0,\n    \"username\": \"Praneeth\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Edit User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"raman\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/user/8LLmfG-RBK5NBZb0jMihkA",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"8LLmfG-RBK5NBZb0jMihkA"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Edit User",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"raman\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/user/8LLmfG-RBK5NBZb0jMihkA",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"8LLmfG-RBK5NBZb0jMihkA"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.1 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 May 2023 23:03:14 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Raman Sri\",\n    \"user_id\": 1,\n    \"username\": \"raman\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Post user post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"msg\":\"user 1 post 1\",\n    \"user_id\":0,\n    \"user_key\":\"vUY_n-Xy3F5BG8QWp8Herg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/post",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post user post",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"msg\":\"user 1 post 1\",\n    \"user_id\":0,\n    \"user_key\":\"vUY_n-Xy3F5BG8QWp8Herg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/post",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"post"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.1 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 May 2023 23:09:07 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "173"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 0,\n    \"key\": \"AvsWUXMsjrZOAMIjqvhrkw\",\n    \"msg\": \"user 1 post 1\",\n    \"timestamp\": \"2023-05-01T19:09:07.420087\",\n    \"user_id\": 0,\n    \"user_key\": \"vUY_n-Xy3F5BG8QWp8Herg\",\n    \"username\": \"Praneeth\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Post 1 user 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"msg\":\"user 1 post 2\",\n    \"user_id\":0,\n    \"user_key\":\"vUY_n-Xy3F5BG8QWp8Herg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/post",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post 1 user 1",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"msg\":\"user 1 post 2\",\n    \"user_id\":0,\n    \"user_key\":\"vUY_n-Xy3F5BG8QWp8Herg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/post",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"post"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.1 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 May 2023 23:10:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "173"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"key\": \"P-47RbiXR9WqR3xD0liDYQ\",\n    \"msg\": \"user 1 post 2\",\n    \"timestamp\": \"2023-05-01T19:10:28.027316\",\n    \"user_id\": 0,\n    \"user_key\": \"vUY_n-Xy3F5BG8QWp8Herg\",\n    \"username\": \"Praneeth\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Post 3 User 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"msg\":\"user 1 post 3\",\n    \"user_id\":0,\n    \"user_key\":\"vUY_n-Xy3F5BG8QWp8Herg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/post",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post 3 User 1",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"msg\":\"user 1 post 3\",\n    \"user_id\":0,\n    \"user_key\":\"vUY_n-Xy3F5BG8QWp8Herg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/post",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"post"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.1 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 May 2023 23:16:53 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "173"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"key\": \"KMkK729XO22vVULnHj-lSQ\",\n    \"msg\": \"user 1 post 3\",\n    \"timestamp\": \"2023-05-01T19:16:53.385761\",\n    \"user_id\": 0,\n    \"user_key\": \"vUY_n-Xy3F5BG8QWp8Herg\",\n    \"username\": \"Praneeth\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Post user post Error",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {   pm.response.to.have.status(404);});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"msg\":\"user 1 post error\",\n    \"user_id\":0,\n    \"user_key\":\"vUY_n-Xy3F5BG8QWp\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/post",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post user post Error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"msg\":\"user 1 post error\",\n    \"user_id\":0,\n    \"user_key\":\"vUY_n-Xy3F5BG8QWp\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/post",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"post"
+							]
+						}
+					},
+					"status": "NOT FOUND",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.1 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 May 2023 23:21:23 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "20"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"err\": \"not found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/post/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"post",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Post",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/post/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"post",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.1 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 May 2023 23:24:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "106"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"msg\": \"user 1 post 3\",\n    \"timestamp\": \"2023-05-01T19:16:53.385761\",\n    \"user_id\": 0,\n    \"username\": \"Praneeth\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Post Using user key",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/post/2/delete/user/vUY_n-Xy3F5BG8QWp8Herg",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"post",
+						"2",
+						"delete",
+						"user",
+						"vUY_n-Xy3F5BG8QWp8Herg"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Post Using user key",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/post/2/delete/user/vUY_n-Xy3F5BG8QWp8Herg",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"post",
+								"2",
+								"delete",
+								"user",
+								"vUY_n-Xy3F5BG8QWp8Herg"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.1 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 May 2023 23:26:15 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "115"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"key\": \"KMkK729XO22vVULnHj-lSQ\",\n    \"timestamp\": \"2023-05-01T19:16:53.385761\",\n    \"user_id\": 0,\n    \"username\": \"Praneeth\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Error using user key",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {   pm.response.to.have.status(404);});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/post/1/delete/user/vUY_n-Xy3F5B",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"post",
+						"1",
+						"delete",
+						"user",
+						"vUY_n-Xy3F5B"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Error using user key",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/post/1/delete/user/vUY_n-Xy3F5B",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"post",
+								"1",
+								"delete",
+								"user",
+								"vUY_n-Xy3F5B"
+							]
+						}
+					},
+					"status": "FORBIDDEN",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.1 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 May 2023 23:29:36 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "20"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"err\": \"forbidden\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get posts of a user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/post/search/user/0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"post",
+						"search",
+						"user",
+						"0"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get posts of a user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/post/search/user/0",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"post",
+								"search",
+								"user",
+								"0"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.1 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 May 2023 23:32:54 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "214"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 0,\n        \"msg\": \"user 1 post 1\",\n        \"timestamp\": \"2023-05-01T19:09:07.420087\",\n        \"user_id\": 0,\n        \"username\": \"Praneeth\"\n    },\n    {\n        \"id\": 1,\n        \"msg\": \"user 1 post 2\",\n        \"timestamp\": \"2023-05-01T19:10:28.027316\",\n        \"user_id\": 0,\n        \"username\": \"Praneeth\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get user posts error",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {   pm.response.to.have.status(404);});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/post/search/user/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"post",
+						"search",
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get user posts error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/post/search/user/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"post",
+								"search",
+								"user",
+								"2"
+							]
+						}
+					},
+					"status": "NOT FOUND",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.1 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 May 2023 23:34:30 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "20"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"err\": \"not found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Post search using text",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/post/search/msg/post",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"post",
+						"search",
+						"msg",
+						"post"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post search using text",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/post/search/msg/post",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"post",
+								"search",
+								"msg",
+								"post"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.1 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 May 2023 23:35:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "214"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 0,\n        \"msg\": \"user 1 post 1\",\n        \"timestamp\": \"2023-05-01T19:09:07.420087\",\n        \"user_id\": 0,\n        \"username\": \"Praneeth\"\n    },\n    {\n        \"id\": 1,\n        \"msg\": \"user 1 post 2\",\n        \"timestamp\": \"2023-05-01T19:10:28.027316\",\n        \"user_id\": 0,\n        \"username\": \"Praneeth\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get posts using text with no posts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {   pm.response.to.have.status(404);});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/post/search/msg/hello",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"post",
+						"search",
+						"msg",
+						"hello"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get posts using text with no posts",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/post/search/msg/hello",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"post",
+								"search",
+								"msg",
+								"hello"
+							]
+						}
+					},
+					"status": "NOT FOUND",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.1 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 May 2023 23:37:14 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "20"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"err\": \"not found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get using time",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"endTime\":\"05/05/2023 23:13:57\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/post/search/time",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"post",
+						"search",
+						"time"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get using time",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"endTime\":\"05/05/2023 23:13:57\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/post/search/time",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"post",
+								"search",
+								"time"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.1 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 May 2023 23:41:07 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "214"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 0,\n        \"msg\": \"user 1 post 1\",\n        \"timestamp\": \"2023-05-01T19:09:07.420087\",\n        \"user_id\": 0,\n        \"username\": \"Praneeth\"\n    },\n    {\n        \"id\": 1,\n        \"msg\": \"user 1 post 2\",\n        \"timestamp\": \"2023-05-01T19:10:28.027316\",\n        \"user_id\": 0,\n        \"username\": \"Praneeth\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get posts using time 2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startTime\":\"04/28/2023 23:13:57\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/post/search/time",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"post",
+						"search",
+						"time"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get posts using time 2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"startTime\":\"04/28/2023 23:13:57\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/post/search/time",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"post",
+								"search",
+								"time"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.1 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 May 2023 23:46:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "214"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 0,\n        \"msg\": \"user 1 post 1\",\n        \"timestamp\": \"2023-05-01T19:09:07.420087\",\n        \"user_id\": 0,\n        \"username\": \"Praneeth\"\n    },\n    {\n        \"id\": 1,\n        \"msg\": \"user 1 post 2\",\n        \"timestamp\": \"2023-05-01T19:10:28.027316\",\n        \"user_id\": 0,\n        \"username\": \"Praneeth\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get posts by time 3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startTime\":\"04/28/2023 23:13:57\",\n    \"endTime\":\"05/05/2023 23:13:57\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/post/search/time",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"post",
+						"search",
+						"time"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get posts by time 3",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"startTime\":\"04/28/2023 23:13:57\",\n    \"endTime\":\"05/05/2023 23:13:57\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/post/search/time",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"post",
+								"search",
+								"time"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.1 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 May 2023 23:48:19 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "214"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 0,\n        \"msg\": \"user 1 post 1\",\n        \"timestamp\": \"2023-05-01T19:09:07.420087\",\n        \"user_id\": 0,\n        \"username\": \"Praneeth\"\n    },\n    {\n        \"id\": 1,\n        \"msg\": \"user 1 post 2\",\n        \"timestamp\": \"2023-05-01T19:10:28.027316\",\n        \"user_id\": 0,\n        \"username\": \"Praneeth\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get posts by time error",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {   pm.response.to.have.status(404);});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"endTime\":\"04/28/2023 23:13:57\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/post/search/time",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"post",
+						"search",
+						"time"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get posts by time error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"endTime\":\"04/28/2023 23:13:57\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/post/search/time",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"post",
+								"search",
+								"time"
+							]
+						}
+					},
+					"status": "NOT FOUND",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.1 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 May 2023 23:53:11 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "20"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"err\": \"not found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get posts by time error 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {   pm.response.to.have.status(404);});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"endTime\":\"04/28/2023 23:13:57\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/post/search/time",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"post",
+						"search",
+						"time"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get posts by time error 2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"endTime\":\"04/28/2023 23:13:57\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/post/search/time",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"post",
+								"search",
+								"time"
+							]
+						}
+					},
+					"status": "NOT FOUND",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.1 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 May 2023 23:54:42 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "20"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"err\": \"not found\"\n}"
+				}
+			]
+		}
+	]
+}
