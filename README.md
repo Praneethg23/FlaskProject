@@ -1,3 +1,4 @@
+(In raw mode you could see the json objects corretcly)
 ****Group:
 
 Praneeth Gubba pgubba@stevens.edu
